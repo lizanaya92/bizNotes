@@ -60,6 +60,21 @@ app.get('/api/getCustomer/:id', (req, res) => {
   })
 }); 
 
+app.get('/api/getCustomerID/:phonenumber', (req, res) => {
+  console.log(req.params)
+  let phone = req.params.phonenumber; 
+
+  let getQueryString = `SELECT * FROM customer WHERE phonenumber = '${phone}'`; 
+
+  pool.query(getQueryString, (err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+        res.status(200).json({results: results}); 
+    }
+  })
+});
+
 app.delete('/api/deleteCustomer/:id', (req, res) => {
 
   let id = req.params.id;

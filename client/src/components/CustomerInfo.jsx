@@ -14,7 +14,7 @@ const CustomerInfo = (props) => {
      <h5>About {props.customer[0].firstname}: {props.customer[0].customerpersonaldetails}</h5>
      <h5>Customer in interested in: {props.customer[0].customerproductdetails}</h5>
      <h5>We last met on: {props.customer[0].lastinteraction}</h5>
-     <h5>Last time we meet we discussed: {props.customer[0].lastinteractiondetails}</h5>
+     <h5>Last time we met we discussed: {props.customer[0].lastinteractiondetails}</h5>
    </div>
   )
   }
