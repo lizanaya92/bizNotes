@@ -22,7 +22,6 @@ app.use(express.json());
 app.use(express.static(__dirname + '/../client/dist')); 
 
 app.post('/api/addCustomer', (req, res) => {
-  console.log(req.body);
 
   let firstName = req.body.firstName;
   let lastName = req.body.lastName;
@@ -43,6 +42,35 @@ app.post('/api/addCustomer', (req, res) => {
       res.status(400).send(err);
     } else {
         res.status(200).json({results: results}); 
+    }
+  })
+}); 
+
+app.get('/api/getCustomer/:id', (req, res) => {
+  let id = req.params.id; 
+
+  let getQueryString = `SELECT * FROM customer WHERE customerid = ${id}`; 
+
+  pool.query(getQueryString, (err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+        res.status(200).json({results: results}); 
+    }
+  })
+}); 
+
+app.delete('/api/deleteCustomer/:id', (req, res) => {
+
+  let id = req.params.id;
+
+  let deleteQueryString = `DELETE FROM customer WHERE customerid = ${id}`
+
+  pool.query(deleteQueryString, (err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      return res.send("Removed") 
     }
   })
 }); 
