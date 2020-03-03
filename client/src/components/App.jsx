@@ -1,24 +1,29 @@
 import React from 'react';
 import PostCustomerForm from './PostCustomerForm.jsx';
 import GetCustomerForm from './GetCustomerForm.jsx';
-import CustomerInfo from './CustomerInfo.jsx';
 import DeleteCustomerForm from './DeleteCustomerForm.jsx'; 
 import GetCustomerID from './GetCustomerID.jsx'; 
-import CustomerId from './CustomerId.jsx';
 import UpdateCustomer from './UpdateCustomer.jsx'; 
+import DisplayForm from './DisplayForm.jsx'; 
 
 class App extends React.Component {
   constructor(props) {
     super(props); 
     this.state = {
       customer: [{firstname: ''}], 
-      customerId: [{firstname: ''}]
+      customerId: [{firstname: ''}],
+      containerDisplay: ''
     }
     this.addNewCustomer = this.addNewCustomer.bind(this);
     this.getCustomer = this.getCustomer.bind(this);  
     this.deleteCustomer = this.deleteCustomer.bind(this);
     this.getCustomerByPhone = this.getCustomerByPhone.bind(this); 
     this.updateCustomer = this.updateCustomer.bind(this); 
+    this.switchDisplayPostCustomer = this.switchDisplayPostCustomer.bind(this); 
+    this.switchDisplayGetCustomerID = this.switchDisplayGetCustomerID.bind(this); 
+    this.switchDisplayGetCustomer = this.switchDisplayGetCustomer.bind(this); 
+    this.switchDisplayUpdateCustomer = this.switchDisplayUpdateCustomer.bind(this); 
+    this.switchDisplayDeleteCustomerID = this.switchDisplayDeleteCustomerID.bind(this); 
   }; 
 
   addNewCustomer(newCustomer) {
@@ -105,8 +110,7 @@ class App extends React.Component {
     .then(
       (response) => {
         response.json()
-      }
-      )
+      })
     .catch((err) => {
       if (err) {
         console.log("Encounterd error in updateCustomer: ", err);
@@ -114,24 +118,57 @@ class App extends React.Component {
     })
   }
 
+  switchDisplayPostCustomer() {
+    this.setState(
+      {containerDisplay: 'PostCustomer'}
+      )
+  }
+
+  switchDisplayGetCustomerID() {
+    this.setState(
+      {containerDisplay: 'GetCustomerID'}
+      )
+  }
+
+  switchDisplayGetCustomer() {
+    this.setState(
+      {containerDisplay: 'GetCustomer'}
+      )
+  }
+
+  switchDisplayUpdateCustomer() {
+    this.setState(
+      {containerDisplay: 'UpdateCustomer'}
+      )
+  }
+
+  switchDisplayDeleteCustomerID() {
+    this.setState(
+      {containerDisplay: 'DeleteCustomerID'}
+      )
+  }
+
   render() {
     return(
       <div>
       <h1>Welcome to bizNotes!</h1>
+      <h2>Built For The Bezt Entrepreneurz</h2>
       <h2>I would like to:</h2>
-      <h3>Add New Customer</h3>
-      <PostCustomerForm addNewCustomer={this.addNewCustomer}/>
-      <h3>Get Customer ID</h3>
-      <GetCustomerID getCustomerByPhone={this.getCustomerByPhone}/>
-      <CustomerId customer={this.state.customerId}/>
-      <h3>Get Customer Information</h3>
-      <GetCustomerForm getCustomer={this.getCustomer}/>
-      <CustomerInfo customer={this.state.customer}/>
-      <h3>Update Customer Profile</h3>
-      <UpdateCustomer updateCustomer={this.updateCustomer}/>
-      <h3>Delete Customer Profile</h3>
-      <p>*Warning!* After you press the "Delete Customer Profile" button, the customer's profile will be permenently deleted. There is no going back!</p>
-      <DeleteCustomerForm deleteCustomer={this.deleteCustomer}/>
+      <button name='PostCustomer' onClick={this.switchDisplayPostCustomer}>Add New Customer</button>
+      <button name='GetCustomerID' onClick={this.switchDisplayGetCustomerID}>Get Customer ID</button>
+      <button name='GetCustomer' onClick={this.switchDisplayGetCustomer}>Get Customer Information</button>
+      <button name='UpdateCustomer' onClick={this.switchDisplayUpdateCustomer}>Update Customer Profile</button>
+      <button name='DeleteCustomerID' onClick={this.switchDisplayDeleteCustomerID}>Delete Customer</button>
+      <DisplayForm 
+        customer={this.state.customer}
+        customerId={this.state.customerId}
+        containerDisplay={this.state.containerDisplay}
+        addNewCustomer={this.addNewCustomer}
+        getCustomerByPhone={this.getCustomerByPhone}
+        getCustomer={this.getCustomer}
+        updateCustomer={this.updateCustomer}
+        deleteCustomer={this.deleteCustomer}
+       />
       </div>
     )
   }
