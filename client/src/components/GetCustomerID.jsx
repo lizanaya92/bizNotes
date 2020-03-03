@@ -22,8 +22,6 @@ class GetCustomerID extends React.Component{
 
   onSubmit (event) {
     event.preventDefault(); 
-    const phone = this.state;
-    console.log("here is the phone:", phone); 
     this.props.getCustomerByPhone(this.state.phone);
 
     this.clearForm();

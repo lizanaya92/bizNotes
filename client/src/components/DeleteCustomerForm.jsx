@@ -22,8 +22,6 @@ class DeleteCustomerForm extends React.Component {
 
   onSubmit (event) {
     event.preventDefault(); 
-    const id = this.state;
-    console.log("here is the customer:", id); 
     this.props.deleteCustomer(this.state.id);
 
     this.clearForm();

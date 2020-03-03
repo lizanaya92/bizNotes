@@ -30,10 +30,7 @@ class UpdateCustomer extends React.Component{
   };
 
   onSubmit (event) {
-    console.log("Event Target", event.target)
     event.preventDefault(); 
-    const id = this.state;
-    console.log("here is the customer:", id); 
     this.props.updateCustomer(this.state.id, this.state.dropDownOptions, this.state.editString);
 
     this.clearForm();

@@ -37,7 +37,6 @@ class App extends React.Component {
     })
     .then((data) => {
       console.log("Here is the data from post function:", data);
-      // this.getAllGroceries();
     })
     .catch((err) => {
       if (err) {
@@ -52,7 +51,6 @@ class App extends React.Component {
       return res.json()
     })
     .then((data) => {
-      console.log("this is data:", data)
       this.setState({
         customer: data.results.rows
       })
@@ -84,7 +82,6 @@ class App extends React.Component {
       return res.json()
     })
     .then((data) => {
-      console.log("this is data:", data)
       this.setState({
         customerId: data.results.rows
       })
@@ -97,7 +94,6 @@ class App extends React.Component {
   }
 
   updateCustomer(id, dropDownOption, string) {
-    console.log("Here are the parameters:", id, dropDownOption, string)
     fetch(`http://localhost:3007/api/updateCustomer/${id}&${dropDownOption}&${string}`, {
       headers: {
         'Accept': 'application/json',
@@ -108,7 +104,6 @@ class App extends React.Component {
     })
     .then(
       (response) => {
-        console.log("First then")
         response.json()
       }
       )

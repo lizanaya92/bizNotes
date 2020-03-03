@@ -22,8 +22,6 @@ class GetCustomerForm extends React.Component{
 
   onSubmit (event) {
     event.preventDefault(); 
-    const id = this.state;
-    console.log("here is the customer:", id); 
     this.props.getCustomer(this.state.id);
 
     this.clearForm();
