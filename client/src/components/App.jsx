@@ -4,7 +4,8 @@ import GetCustomerForm from './GetCustomerForm.jsx';
 import CustomerInfo from './CustomerInfo.jsx';
 import DeleteCustomerForm from './DeleteCustomerForm.jsx'; 
 import GetCustomerID from './GetCustomerID.jsx'; 
-import CustomerId from './CustomerId.jsx'
+import CustomerId from './CustomerId.jsx';
+import UpdateCustomer from './UpdateCustomer.jsx'; 
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
     this.getCustomer = this.getCustomer.bind(this);  
     this.deleteCustomer = this.deleteCustomer.bind(this);
     this.getCustomerByPhone = this.getCustomerByPhone.bind(this); 
+    this.updateCustomer = this.updateCustomer.bind(this); 
   }; 
 
   addNewCustomer(newCustomer) {
@@ -94,6 +96,29 @@ class App extends React.Component {
     })
   }
 
+  updateCustomer(id, dropDownOption, string) {
+    console.log("Here are the parameters:", id, dropDownOption, string)
+    fetch(`http://localhost:3007/api/updateCustomer/${id}&${dropDownOption}&${string}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'PATCH',                                                              
+      body: JSON.stringify( { dropDownOption: string } ) 
+    })
+    .then(
+      (response) => {
+        console.log("First then")
+        response.json()
+      }
+      )
+    .catch((err) => {
+      if (err) {
+        console.log("Encounterd error in updateCustomer: ", err);
+      }
+    })
+  }
+
   render() {
     return(
       <div>
@@ -107,10 +132,11 @@ class App extends React.Component {
       <h3>Get Customer Information</h3>
       <GetCustomerForm getCustomer={this.getCustomer}/>
       <CustomerInfo customer={this.state.customer}/>
+      <h3>Update Customer Profile</h3>
+      <UpdateCustomer updateCustomer={this.updateCustomer}/>
       <h3>Delete Customer Profile</h3>
       <p>*Warning!* After you press the "Delete Customer Profile" button, the customer's profile will be permenently deleted. There is no going back!</p>
       <DeleteCustomerForm deleteCustomer={this.deleteCustomer}/>
-      <h3>Update Customer Profile</h3>
       </div>
     )
   }

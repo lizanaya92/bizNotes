@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CustomerInfo = (props) => {
-  console.log("here are the props:", props.customer)
+
   if(props.customer.length === 0) {
     return (
       <h5>Whoops! Looks like that customer is not in the system. Please try again using a different customer ID.</h5>

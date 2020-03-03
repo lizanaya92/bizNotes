@@ -61,7 +61,7 @@ app.get('/api/getCustomer/:id', (req, res) => {
 }); 
 
 app.get('/api/getCustomerID/:phonenumber', (req, res) => {
-  console.log(req.params)
+
   let phone = req.params.phonenumber; 
 
   let getQueryString = `SELECT * FROM customer WHERE phonenumber = '${phone}'`; 
@@ -82,6 +82,24 @@ app.delete('/api/deleteCustomer/:id', (req, res) => {
   let deleteQueryString = `DELETE FROM customer WHERE customerid = ${id}`
 
   pool.query(deleteQueryString, (err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      return res.send("Removed") 
+    }
+  })
+}); 
+
+app.patch('/api/updateCustomer/:id&:dropDownOption&:string', (req, res) => {
+  console.log("here are the params:", req.params)
+
+  let id = req.params.id; 
+  let dropDownOption = req.params.dropDownOption; 
+  let string = req.params.string; 
+
+  let patchQueryString = `UPDATE customer SET ${dropDownOption} = '${string}' WHERE customerid = ${id}`
+
+  pool.query(patchQueryString, (err, results) => {
     if (err) {
       res.status(400).send(err);
     } else {

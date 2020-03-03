@@ -62,7 +62,7 @@ class PostCustomerForm extends React.Component {
       <label> Address
         <input name="address" value={this.state.address} onChange={this.onInputChange}/>
       </label>
-      <label> Phone Number
+      <label> Phone Number (e.g. (303)734-4509)
         <input name="phoneNumber" value={this.state.phoneNumber}
         onChange={this.onInputChange}/>
       </label>
