@@ -52,37 +52,37 @@ class PostCustomerForm extends React.Component {
 
   render() {
     return(
-    <form onSubmit={this.onSubmit}>
-      <label> First Name
-        <input name="firstName" value={this.state.firstName} onChange={this.onInputChange}/>
-      </label>
-      <label> Last Name
-        <input name="lastName" value={this.state.lastName} onChange={this.onInputChange}/>
-      </label>
-      <label> Address
-        <input name="address" value={this.state.address} onChange={this.onInputChange}/>
-      </label>
-      <label> Phone Number (e.g. (303)734-4509)
-        <input name="phoneNumber" value={this.state.phoneNumber}
-        onChange={this.onInputChange}/>
-      </label>
-      <label> Email
-        <input name="emailAddress" value={this.state.emailAddress} onChange={this.onInputChange}/>
-      </label>
-      <label> Customer Personal Details
-        <input name="customerPersonalDetails" value={this.state.customerPersonalDetails} onChange={this.onInputChange}/>
-      </label>
-      <label> Customer Product Details
-        <input name="customerProductDetails" value={this.state.customerProductDetails} onChange={this.onInputChange}/>
-      </label>
-      <label> Last Interaction Date (e.g. 2020-01-30)
-        <input name="lastInteraction" value={this.state.lastInteraction} onChange={this.onInputChange}/>
-      </label>
-      <label> Last Interaction Notes
-        <input name="lastInteractionDetails" value={this.state.lastInteractionDetails} onChange={this.onInputChange}/>
-      </label>
-      <button>Add New Customer</button>
-    </form>
+      <form className='postCustomer' onSubmit={this.onSubmit}>
+        <label> First Name
+          <input name="firstName" value={this.state.firstName} onChange={this.onInputChange}/>
+        </label>
+        <label> Last Name
+          <input name="lastName" value={this.state.lastName} onChange={this.onInputChange}/>
+        </label>
+        <label> Address
+          <input name="address" value={this.state.address} onChange={this.onInputChange}/>
+        </label>
+        <label> Phone Number (e.g. (303)734-4509)
+          <input name="phoneNumber" value={this.state.phoneNumber}
+          onChange={this.onInputChange}/>
+        </label>
+        <label> Email
+          <input name="emailAddress" value={this.state.emailAddress} onChange={this.onInputChange}/>
+        </label>
+        <label> Customer Personal Details
+          <input name="customerPersonalDetails" value={this.state.customerPersonalDetails} onChange={this.onInputChange}/>
+        </label>
+        <label> Customer Product Details
+          <input name="customerProductDetails" value={this.state.customerProductDetails} onChange={this.onInputChange}/>
+        </label>
+        <label> Last Interaction Date (e.g. 2020-01-30)
+          <input name="lastInteraction" value={this.state.lastInteraction} onChange={this.onInputChange}/>
+        </label>
+        <label> Last Interaction Notes
+          <input name="lastInteractionDetails" value={this.state.lastInteractionDetails} onChange={this.onInputChange}/>
+        </label>
+        <button>Add New Customer</button>
+      </form>
     )
   }
 }

@@ -8,14 +8,32 @@ const CustomerInfo = (props) => {
     )
   } else {
   return (
-   <div>
-     <div><h4>First Name: {props.customer[0].firstname}</h4> <h4> Last Name: {props.customer[0].lastname}</h4></div>
-     <h5>Phone Number: {props.customer[0].phonenumber}</h5> <h5>Email address: {props.customer[0].emailaddress}</h5>
-     <h5>About {props.customer[0].firstname}: {props.customer[0].customerpersonaldetails}</h5>
-     <h5>Customer in interested in: {props.customer[0].customerproductdetails}</h5>
-     <h5>We last met on: {props.customer[0].lastinteraction}</h5>
-     <h5>Last time we met we discussed: {props.customer[0].lastinteractiondetails}</h5>
-   </div>
+    <div className='customer-info'>
+      <div className='flex'>
+      <p>First Name: </p><h5>{props.customer[0].firstname}</h5>
+      </div>
+      <div className='flex'>
+      <p>Last Name: </p><h5>{props.customer[0].lastname}</h5>
+      </div>
+      <div className='flex'>
+      <p>Phone Number: </p><h5>{props.customer[0].phonenumber}</h5> 
+      </div>
+      <div className='flex'>
+      <p>Email address: </p><h5>{props.customer[0].emailaddress}</h5>
+      </div>
+      <div className='flex'>
+      <p>About {props.customer[0].firstname}: </p><h5>{props.customer[0].customerpersonaldetails}</h5>
+      </div>
+      <div className='flex'>
+      <p>Customer in interested in: </p><h5>{props.customer[0].customerproductdetails}</h5>
+      </div>
+      <div className='flex'>
+      <p>We last met on: </p><h5>{props.customer[0].lastinteraction}</h5>
+      </div>
+      <div className='flex'>
+      <p>Last time we met we discussed: </p><h5>{props.customer[0].lastinteractiondetails}</h5>
+      </div>
+    </div>
   )
   }
 }

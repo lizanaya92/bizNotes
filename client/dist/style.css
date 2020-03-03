@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #efeeee;
+  color: #325d79;
+  text-align: center;
+}
+
+button {
+  background-color: #f26627;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 9px #999;
+  outline: none;
+  cursor: pointer;
+}
+
+.postCustomer {
+}
+
+input {
+  border: 2px solid #9bd7d1;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.greeting-header {
+  background-image: linear-gradient(
+    to right,
+    #fac7a7,
+    #f9a26c 400px,
+    #fac7a7 800px
+  );
+  padding: 10px 0;
+  margin-bottom: 8px;
+  /* background-color: #f9a26c; */
+}
+
+.main-btns {
+  margin: 0 1em 1em 1em;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.motto-header {
+  margin-bottom: 3.1em;
+}
+
+.margin-left {
+  margin-left: 14px;
+}
+
+.postCustomer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.postCustomer label input {
+  margin: 0 0 10px 12px;
+}
+
+label {
+  font-size: 17px;
+}
+
+.postCustomer button {
+  margin-top: 12px;
+}
+
+button:hover {
+  background-color: #355379;
+}
+
+.get-custid__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-custid__form label {
+  margin: 22px 0;
+}
+
+.get-custid__form button {
+  margin-bottom: 20px;
+}
+
+.customer-info h5 {
+  font-size: 1.1em;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.flex p {
+  margin-right: 14px;
+}
+
+.customer-form {
+  margin: 14px 0;
+}
+
+.customer-form label {
+  margin-bottom: 50px;
+}
+
+.customer-form label input {
+  font-size: 18px;
+  margin-right: 20px;
+  margin-left: 9px;
+}
+
+.update-custid__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 40%;
+  margin-right: 30%;
+}
+
+.update-custid__form label input {
+  margin: 0 0 10px 12px;
+}
+
+.editFields {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu {
+  margin-top: 10px;
+}

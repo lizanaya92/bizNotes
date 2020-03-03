@@ -47,11 +47,14 @@ class UpdateCustomer extends React.Component{
 
   render() {
     return(
-    <form onSubmit={this.onSubmit}>
+    <form className='update-custid__form' onSubmit={this.onSubmit}>
+      <div className='customer-info'>
       <label> Customer ID:
         <input name="id" value={this.state.id} onChange={this.onInputChange}/>
       </label>
-      <label htmlFor="editFields">Choose a field to edit:</label>
+      </div>
+      <div className='customer-info'>
+      <label htmlFor="editFields">Choose a field to edit:&nbsp;</label>
       <select id="editField" name="dropDownOptions" value={this.state.dropDownOptions} onChange={this.onInputChange}>
         <option value="select">Select One</option>
         <option value="firstname">First Name</option>
@@ -64,9 +67,12 @@ class UpdateCustomer extends React.Component{
         <option value="lastinteraction">Last Interaction Date (e.g. 2020-01-30)</option>
         <option value="lastinteractiondetails">Last Interaction Notes</option>
       </select>
+      </div>
+      <div className='dropdown-menu'>
       <label> Edit to be made:
         <input name="editString" value={this.state.editString} onChange={this.onInputChange}/>
       </label>
+      </div>
       <button>Update Customer Information</button>
     </form>
     )

@@ -35,12 +35,12 @@ class GetCustomerID extends React.Component{
 
   render() {
     return(
-    <form onSubmit={this.onSubmit}>
-      <label> Customer Phone Number (e.g. (303)734-4509)
-        <input name="phone" value={this.state.phone} onChange={this.onInputChange}/>
-      </label>
-      <button>Get Customer ID</button>
-    </form>
+      <form className='get-custid__form' onSubmit={this.onSubmit}>
+        <label> Customer Phone Number (e.g. (303)734-4509)
+          <input name="phone" value={this.state.phone} onChange={this.onInputChange} className='margin-left'/>
+        </label>
+        <button>Get Customer ID</button>
+      </form>
     )
   }
 }

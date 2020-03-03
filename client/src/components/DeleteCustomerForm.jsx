@@ -35,7 +35,7 @@ class DeleteCustomerForm extends React.Component {
 
   render() {
     return(
-    <form onSubmit={this.onSubmit}>
+    <form className='get-custid__form' onSubmit={this.onSubmit}>
       <h3>Delete Customer Profile</h3>
       <p>*Warning!* After you press the "Delete Customer Profile" button, the customer's profile will be permenently deleted. There is no going back!</p>
       <label> Customer ID

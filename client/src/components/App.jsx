@@ -151,24 +151,24 @@ class App extends React.Component {
   render() {
     return(
       <div>
-      <h1>Welcome to bizNotes!</h1>
-      <h2>Built For The Bezt Entrepreneurz</h2>
-      <h2>I would like to:</h2>
-      <button name='PostCustomer' onClick={this.switchDisplayPostCustomer}>Add New Customer</button>
-      <button name='GetCustomerID' onClick={this.switchDisplayGetCustomerID}>Get Customer ID</button>
-      <button name='GetCustomer' onClick={this.switchDisplayGetCustomer}>Get Customer Information</button>
-      <button name='UpdateCustomer' onClick={this.switchDisplayUpdateCustomer}>Update Customer Profile</button>
-      <button name='DeleteCustomerID' onClick={this.switchDisplayDeleteCustomerID}>Delete Customer</button>
-      <DisplayForm 
-        customer={this.state.customer}
-        customerId={this.state.customerId}
-        containerDisplay={this.state.containerDisplay}
-        addNewCustomer={this.addNewCustomer}
-        getCustomerByPhone={this.getCustomerByPhone}
-        getCustomer={this.getCustomer}
-        updateCustomer={this.updateCustomer}
-        deleteCustomer={this.deleteCustomer}
-       />
+        <h1 className='greeting-header'>Welcome to bizNotes!</h1>
+        <h2 className='motto-header' >Built For The Bezt Entrepreneurz</h2>
+        <h2 className='margin-bottom' >I would like to:</h2>
+        <button name='PostCustomer' className='main-btns' onClick={this.switchDisplayPostCustomer}>Add New Customer</button>
+        <button name='GetCustomerID' className='main-btns' onClick={this.switchDisplayGetCustomerID}>Get Customer ID</button>
+        <button name='GetCustomer' className='main-btns' onClick={this.switchDisplayGetCustomer}>Get Customer Information</button>
+        <button name='UpdateCustomer' className='main-btns' onClick={this.switchDisplayUpdateCustomer}>Update Customer Profile</button>
+        <button name='DeleteCustomerID' className='main-btns' onClick={this.switchDisplayDeleteCustomerID}>Delete Customer</button>
+        <DisplayForm 
+          customer={this.state.customer}
+          customerId={this.state.customerId}
+          containerDisplay={this.state.containerDisplay}
+          addNewCustomer={this.addNewCustomer}
+          getCustomerByPhone={this.getCustomerByPhone}
+          getCustomer={this.getCustomer}
+          updateCustomer={this.updateCustomer}
+          deleteCustomer={this.deleteCustomer}
+        />
       </div>
     )
   }

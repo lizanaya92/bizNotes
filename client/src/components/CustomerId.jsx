@@ -8,10 +8,17 @@ const CustomerId = (props) => {
     )
   } else {
   return (
-   <div>
-     <div><h5>First Name: {props.customer[0].firstname}</h5> <h5> Last Name: {props.customer[0].lastname}</h5></div>
-     <h5>Customer ID: {props.customer[0].customerid}</h5>
-   </div>
+    <div className='customer-info'>
+      <div className='flex'>
+        <p>First Name: </p><h5>{props.customer[0].firstname}</h5>
+      </div>
+      <div className='flex'>
+        <p>Last Name: </p><h5>{props.customer[0].lastname}</h5>
+      </div>
+      <div className='flex'>
+        <p>Customer ID: </p><h5>{props.customer[0].customerid}</h5>
+      </div>
+    </div>
   )
   }
 }
