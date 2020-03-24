@@ -1,6 +1,6 @@
-BizNotez
+#BizNotez
 
-BizNotez was created to relieve entrepreneurs' pain points of keep track of customers. The application makes it easy for entrepreneurs to maintain client-customer relationships as it allows the client to create, lookup, edit, or delete customers' profiles.
+######BizNotez was created to relieve entrepreneurs' pain points of keep track of customers. The application makes it easy for entrepreneurs to maintain client-customer relationships as it allows the client to create, lookup, edit, or delete customers' profiles.
 
 Setup
 
