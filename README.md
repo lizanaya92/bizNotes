@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 # BizNotez
 
 ![Image of Shaking Hands](https://cdn5.vectorstock.com/i/thumb-large/19/49/emoticons-shaking-hands-vector-5061949.jpg)
+=======
+#BizNotez
+>>>>>>> 9ae2ece72e0fa1b4aeae742b0ef87a3f56df15cf
 
-BizNotez was created to relieve entrepreneurs' pain points of keep track of customers. The application makes it easy for entrepreneurs to maintain client-customer relationships as it allows the client to create, lookup, edit, or delete customers' profiles.
+######BizNotez was created to relieve entrepreneurs' pain points of keep track of customers. The application makes it easy for entrepreneurs to maintain client-customer relationships as it allows the client to create, lookup, edit, or delete customers' profiles.
 
 ## Setup
 
