@@ -9,13 +9,13 @@ BizNotez was created to relieve entrepreneurs' pain points of keep track of cust
 👯 Clone this repo to your local machine using https://github.com/lizanaya92/bizNotes.git
 
 now install npm packages
-<font color="gray">\$ npm install</font>
+\$ npm install
 
 to use webpack-dev-server
-<font color="gray">\$ npm run react-dev</font>
+\$ npm run react-dev
 
 to run server file
-<font color="gray">\$ npm run n-start</font>
+\$ npm run n-start
 
 Open http://localhost:3007 to view it in the browser. You should see this:
 
