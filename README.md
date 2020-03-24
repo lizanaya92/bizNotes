@@ -1,8 +1,10 @@
-BizNotez
+# BizNotez
+
+![Image of Shaking Hands](https://cdn5.vectorstock.com/i/thumb-large/19/49/emoticons-shaking-hands-vector-5061949.jpg)
 
 BizNotez was created to relieve entrepreneurs' pain points of keep track of customers. The application makes it easy for entrepreneurs to maintain client-customer relationships as it allows the client to create, lookup, edit, or delete customers' profiles.
 
-Setup
+## Setup
 
 👯 Clone this repo to your local machine using https://github.com/lizanaya92/bizNotes.git
 
